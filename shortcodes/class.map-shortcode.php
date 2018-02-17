@@ -98,10 +98,6 @@ class Leaflet_Map_Shortcode extends Leaflet_Shortcode {
 		wp_enqueue_script('leaflet_js');
 		wp_enqueue_script('leaflet_map_init');
 
-		if (wp_script_is('leaflet_mapquest_plugin', 'registered')) {
-		    // mapquest doesn't accept direct tile access as of July 11, 2016
-		    wp_enqueue_script('leaflet_mapquest_plugin');
-		}
 	}
 
 	protected function getHTML ($atts='', $content=null) {
@@ -124,15 +120,11 @@ class Leaflet_Map_Shortcode extends Leaflet_Shortcode {
 		$lng = empty($lng) ? $settings->get('default_lng') : $lng;
 
 		/*
-		mapquest doesn't need tile urls
+		tile urls
 		*/
-		if (wp_script_is('leaflet_mapquest_plugin', 'registered')) {
-			$tileurl = '';
-			$subdomains = '';
-		} else {
-		    $tileurl = empty($tileurl) ? $settings->get('map_tile_url') : $tileurl;
-		    $subdomains = empty($subdomains) ? $settings->get('map_tile_url_subdomains') : $subdomains;
-		}
+	    $tileurl = empty($tileurl) ? $settings->get('map_tile_url') : $tileurl;
+	    $subdomains = empty($subdomains) ? $settings->get('map_tile_url_subdomains') : $subdomains;
+
 
 		/* should be iterated for multiple maps */
 		ob_start(); ?>

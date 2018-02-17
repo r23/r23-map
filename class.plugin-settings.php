@@ -167,31 +167,6 @@ class Leaflet_Map_Plugin_Settings {
                 ),
                 'helptext' => __('Choose a tiling service or provide your own.', 'leaflet-map')
             ),
-            'mapquest_appkey' => array(
-                'display_name'=>__('MapQuest App Key', 'leaflet-map'),
-                'default' => __('Supply an app key if you choose MapQuest', 'leaflet-map'),
-                'type' => 'text',
-                'noreset' => true,
-                'helptext' => sprintf('%1$s <a href="https://developer.mapquest.com/plan_purchase/steps/business_edition/business_edition_free/register" target="_blank"> %2$s </a>, %3$s <a href="https://developer.mapquest.com/user/me/apps" target="_blank"> %4$s </a> %5$s',
-                    __('If you choose MapQuest, you must provide an app key.', 'leaflet-map'),
-                    __('Sign up', 'leaflet-map'),
-                    __('then', 'leaflet-map'),
-                    __('Create a new app', 'leaflet-map'),
-                    __('then supply the "Consumer Key" here.', 'leaflet-map')
-                )
-            ),
-            'map_tile_url' => array(
-                'display_name'=>__('Map Tile URL', 'leaflet-map'),
-                'default'=>'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-                'type' => 'text',
-                'helptext' => sprintf('%1$s: <a href="http://wiki.openstreetmap.org/wiki/Tile_servers" target="_blank"> %2$s </a>. %3$s: <a href="http://devblog.mapquest.com/2016/06/15/modernization-of-mapquest-results-in-changes-to-open-tile-access/" target="_blank"> %4$s </a>. %5$s <br/> <code>[leaflet-map tileurl=http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg subdomains=abcd]</code>',
-                    __('See more tile servers', 'leaflet-map'),
-                    __('here', 'leaflet-map'),
-                    __('Please note: free tiles from MapQuest have been discontinued without use of an app key', 'leaflet-map'),
-                    __('blog post', 'leaflet-map'),
-                    $foreachmap
-                )
-            ),
             'map_tile_url_subdomains' => array(
                 'display_name'=>__('Map Tile URL Subdomains', 'leaflet-map'),
                 'default'=>'abc',

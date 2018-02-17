@@ -169,17 +169,6 @@ class Leaflet_Map {
 
         wp_register_style('leaflet_stylesheet', $css_url, Array(), null, false);
         wp_register_script('leaflet_js', $js_url, Array(), null, true);
-
-        // new required MapQuest javascript file
-        $tiling_service = $settings->get('default_tiling_service');
-
-        if ($tiling_service == 'mapquest') {
-            $mapquest_js_url = 'https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-map.js?key=%s';
-            $mq_appkey = $settings->get('mapquest_appkey');
-            $mapquest_js_url = sprintf($mapquest_js_url, $mq_appkey);
-
-            wp_register_script('leaflet_mapquest_plugin', $mapquest_js_url, Array('leaflet_js'), '2.0', true);
-        }
         
         // optional ajax geojson plugin
         wp_register_script('tmcw_togeojson', 'https://cdn.rawgit.com/mapbox/togeojson/master/togeojson.js', Array('jquery'), self::$version, false);
