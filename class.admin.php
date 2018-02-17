@@ -41,7 +41,7 @@ class Leaflet_Map_Admin {
     */
     
     public function admin_init () {
-        wp_register_style('leaflet_admin_stylesheet', plugins_url('style.css', LEAFLET_MAP__PLUGIN_FILE));
+        wp_register_style('leaflet_admin_stylesheet', plugins_url('css/style.min.css', LEAFLET_MAP__PLUGIN_FILE));
     }
 
     /**
