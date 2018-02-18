@@ -11,7 +11,7 @@
 // Exit if accessed directly
 if ( !defined( 'ABSPATH' ) ) exit;
 
-include_once(LEAFLET_MAP__PLUGIN_DIR . 'shortcodes/class.geojson-shortcode.php');
+include_once LEAFLET_MAP__PLUGIN_DIR . 'shortcodes/class-geojson-shortcode.php';
 
 class Leaflet_Gpx_Shortcode extends Leaflet_Geojson_Shortcode {
 	/**

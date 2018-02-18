@@ -33,31 +33,31 @@ class Leaflet_Map {
     */
     private $shortcodes = array(
         'leaflet-geojson' => array(
-            'file' => 'class.geojson-shortcode.php',
+            'file' => 'class-geojson-shortcode.php',
             'class' => 'Leaflet_Geojson_Shortcode'
         ),
         'leaflet-image' => array(
-            'file' => 'class.image-shortcode.php',
+            'file' => 'class-image-shortcode.php',
             'class' => 'Leaflet_Image_Shortcode'
         ),
         'leaflet-kml' => array(
-            'file' => 'class.kml-shortcode.php',
+            'file' => 'class-kml-shortcode.php',
             'class' => 'Leaflet_Kml_Shortcode'
         ),
         'leaflet-gpx' => array(
-            'file' => 'class.gpx-shortcode.php',
+            'file' => 'class-gpx-shortcode.php',
             'class' => 'Leaflet_Gpx_Shortcode'
         ),
         'leaflet-line' => array(
-            'file' => 'class.line-shortcode.php',
+            'file' => 'class-line-shortcode.php',
             'class' => 'Leaflet_Line_Shortcode'
         ),
         'leaflet-map' => array(
-            'file' => 'class.map-shortcode.php',
+            'file' => 'class-map-shortcode.php',
             'class' => 'Leaflet_Map_Shortcode'
         ),
         'leaflet-marker' => array(
-            'file' => 'class.marker-shortcode.php',
+            'file' => 'class-marker-shortcode.php',
             'class' => 'Leaflet_Marker_Shortcode'
         )
     );
@@ -97,7 +97,7 @@ class Leaflet_Map {
     */
     private function init_hooks() {
         // Leaflet_Map_Admin
-        include_once(LEAFLET_MAP__PLUGIN_DIR . 'class.admin.php');
+        include_once LEAFLET_MAP__PLUGIN_DIR . 'class-admin.php';
         
         // init admin
         Leaflet_Map_Admin::init();
@@ -136,12 +136,12 @@ class Leaflet_Map {
         // remove settings in db
         // think it needs to be included again (because __construct 
         // won't need to execute)
-        include_once(LEAFLET_MAP__PLUGIN_DIR . 'class.plugin-settings.php');
+        include_once LEAFLET_MAP__PLUGIN_DIR . 'class-plugin-settings.php';
         $settings = Leaflet_Map_Plugin_Settings::init();
         $settings->reset();
 
         // remove geocoder locations in db
-        include_once(LEAFLET_MAP__PLUGIN_DIR . 'class.geocoder.php');
+        include_once LEAFLET_MAP__PLUGIN_DIR . 'class-geocoder.php';
         Leaflet_Geocoder::remove_caches();
     }
 
@@ -160,7 +160,7 @@ class Leaflet_Map {
 
     public static function enqueue_and_register () {
         // Leaflet_Map_Plugin_Settings
-        include_once LEAFLET_MAP__PLUGIN_DIR . 'class.plugin-settings.php';
+        include_once LEAFLET_MAP__PLUGIN_DIR . 'class-plugin-settings.php';
 
 		wp_register_style('leaflet_stylesheet', plugins_url('leaflet/leaflet.css', __FILE__ ));
 		

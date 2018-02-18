@@ -13,7 +13,7 @@
 // Exit if accessed directly
 if ( !defined( 'ABSPATH' ) ) exit;
 
-include_once(LEAFLET_MAP__PLUGIN_DIR . 'shortcodes/class.shortcode.php');
+include_once(LEAFLET_MAP__PLUGIN_DIR . 'shortcodes/class-shortcode.php');
 
 class Leaflet_Map_Shortcode extends Leaflet_Shortcode {
 	protected $map_id = 0;
@@ -105,7 +105,7 @@ class Leaflet_Map_Shortcode extends Leaflet_Shortcode {
 
 		if (!empty($address)) {
 		    /* try geocoding */
-		    include_once(LEAFLET_MAP__PLUGIN_DIR . 'class.geocoder.php');
+		    include_once LEAFLET_MAP__PLUGIN_DIR . 'class-geocoder.php';
 		    $location = new Leaflet_Geocoder( $address );
 		    $lat = $location->lat;
 		    $lng = $location->lng;

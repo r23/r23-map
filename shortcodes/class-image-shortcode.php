@@ -11,7 +11,7 @@
 // Exit if accessed directly
 if ( !defined( 'ABSPATH' ) ) exit;
 
-include_once(LEAFLET_MAP__PLUGIN_DIR . 'shortcodes/class.map-shortcode.php');
+include_once(LEAFLET_MAP__PLUGIN_DIR . 'shortcodes/class-map-shortcode.php');
 
 class Leaflet_Image_Shortcode extends Leaflet_Map_Shortcode {
     /**

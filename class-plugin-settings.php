@@ -12,7 +12,7 @@
 // Exit if accessed directly
 if ( !defined( 'ABSPATH' ) ) exit;
 
-include_once(LEAFLET_MAP__PLUGIN_DIR . 'class.plugin-option.php');
+include_once LEAFLET_MAP__PLUGIN_DIR . 'class-plugin-option.php';
 
 class Leaflet_Map_Plugin_Settings {
 	/**
