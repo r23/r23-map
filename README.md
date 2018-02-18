@@ -4,16 +4,20 @@ This plugin is a fork of https://wordpress.org/plugins/leaflet-map/
 Leaflet Map WordPress Plugin
 ========
 
-Add a map generated with [LeafletJS](http://leafletjs.com/): an open-source JavaScript library for mobile-friendly interactive maps. Map tiles are provided by default through [OpenStreetMap](http://www.openstreetmap.org/), or [MapQuest](https://www.mapquest.ca/) (with an app key).  Can be set per map with shortcode attributes or through the dashboard settings.
+Add a map generated with [LeafletJS](http://leafletjs.com/): an open-source JavaScript library for mobile-friendly interactive maps. Map tiles are provided by default through [OpenStreetMap](http://www.openstreetmap.org/).  Can be set per map with shortcode attributes or through the dashboard settings.
 
 ![Admin Screenshot](https://imgur.com/W4BGTif.jpg)
 
 Installation
 ------------
 
-* (simple) Install via the WordPress plugins page on your WordPress site: `/wp-admin/plugin-install.php` (search Leaflet)
+* Upload the entire `r23-map` folder to the `/wp-content/plugins/` directory.
 
-* (needlessly complicated) Copy this repo (or download a release of it) into your WordPress plugins directory: `/wp-content/plugins/`. You might also need to name the directory 'leaflet-map', like so: `git clone https://github.com/bozdoz/wp-plugin-leaflet-map.git leaflet-map`
+* Activate the plugin through the 'Plugins' menu in WordPress.
+
+
+You will find 'Leaflet Map' menu in your WordPress admin panel.
+
 
 
 Available Shortcodes
@@ -83,9 +87,4 @@ Check it out [here](https://gist.github.com/bozdoz/064a7101b95a324e8852fe9381ab9
 ### [leaflet-kml]
 
 Same idea as geojson (above), but takes KML files and loads [Mapbox's togeojson library](https://github.com/mapbox/togeojson)
-
-Contributing
--------------
-
-[View Contribution guidelines](https://github.com/bozdoz/wp-plugin-leaflet-map/blob/master/CONTRIBUTING.md)
 

@@ -13,7 +13,7 @@ class Leaflet_Map {
     * Used for asset file cache-busting
     * @var string major minor patch version
     */
-    public static $version = '2.10.0';
+    public static $version = '1.0.0-dev';
 
     /**
     * Leaflet version

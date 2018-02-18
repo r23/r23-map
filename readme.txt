@@ -1,3 +1,18 @@
+=== R23 Map ===
+Author: r23
+Author URI: https://blog.r23.de/
+Plugin URI: 
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9NRUZEVVKK7VL
+Tags: leaflet, map, mobile, javascript, openstreetmap, interactive
+Tested up to: 4.9
+Version: 1.0
+License: GPLv2
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+  
+   
+Based on:
+
+
 === Leaflet Map ===
 Author: bozdoz
 Author URI: https://www.twitter.com/bozdoz/
