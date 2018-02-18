@@ -34,7 +34,7 @@ if (isset($_POST['submit'])) {
 </div>
 <?php
 } elseif (isset($_POST['clear-geocoder-cache'])) {
-	include_once LEAFLET_MAP__PLUGIN_DIR . 'class-geocoder.php';
+	include_once LEAFLET_MAP__PLUGIN_DIR . 'classes/class-geocoder.php';
 	Leaflet_Geocoder::remove_caches();
 ?>
 <div class="notice notice-success is-dismissible">

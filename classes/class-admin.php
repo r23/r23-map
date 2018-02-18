@@ -71,7 +71,7 @@ class Leaflet_Map_Admin {
 
         $settings = Leaflet_Map_Plugin_Settings::init();
         $plugin_data = get_plugin_data(LEAFLET_MAP__PLUGIN_FILE);
-        include 'templates/settings.php';
+        include_once LEAFLET_MAP__PLUGIN_DIR . 'templates/settings.php';
     }
 
     /**
@@ -82,7 +82,7 @@ class Leaflet_Map_Admin {
         wp_enqueue_style( 'leaflet_admin_stylesheet' );
         wp_enqueue_script('custom_plugin_js', plugins_url('scripts/get-shortcode.min.js', LEAFLET_MAP__PLUGIN_FILE), array('leaflet_js'), false);
 
-        include 'templates/shortcode-helper.php';
+        include_once LEAFLET_MAP__PLUGIN_DIR . 'templates/shortcode-helper.php';
     }
 
     /**

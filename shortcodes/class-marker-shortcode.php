@@ -15,11 +15,11 @@ if ( !defined( 'ABSPATH' ) ) exit;
 include_once LEAFLET_MAP__PLUGIN_DIR . 'shortcodes/class-shortcode.php';
 
 class Leaflet_Marker_Shortcode extends Leaflet_Shortcode {
-	protected function getHTML ($atts='', $content=null) {
+	protected function getHTML ($atts = '', $content = null) {
         if (!empty($atts)) extract($atts);
 
         if (!empty($address)) {
-            include_once LEAFLET_MAP__PLUGIN_DIR . 'class-geocoder.php';
+            include_once LEAFLET_MAP__PLUGIN_DIR . 'classes/class-geocoder.php';
             $location = new Leaflet_Geocoder( $address );
             $lat = $location->lat;
             $lng = $location->lng;

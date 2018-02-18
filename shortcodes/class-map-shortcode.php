@@ -37,7 +37,7 @@ class Leaflet_Map_Shortcode extends Leaflet_Shortcode {
 	* @return array 			new atts, which is actually an array
 	*/
 
-	protected function getAtts ($atts='', $content=null) {
+	protected function getAtts ($atts = '', $content = null) {
 		$atts = (array) $atts;
 		extract($atts);
 
@@ -100,12 +100,12 @@ class Leaflet_Map_Shortcode extends Leaflet_Shortcode {
 
 	}
 
-	protected function getHTML ($atts='', $content=null) {
+	protected function getHTML ($atts = '', $content = null) {
 		extract($this->getAtts($atts));
 
 		if (!empty($address)) {
 		    /* try geocoding */
-		    include_once LEAFLET_MAP__PLUGIN_DIR . 'class-geocoder.php';
+		    include_once LEAFLET_MAP__PLUGIN_DIR . 'classes/class-geocoder.php';
 		    $location = new Leaflet_Geocoder( $address );
 		    $lat = $location->lat;
 		    $lng = $location->lng;
