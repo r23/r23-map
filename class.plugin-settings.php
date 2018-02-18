@@ -48,10 +48,8 @@ class Leaflet_Map_Plugin_Settings {
 
 	private function __construct () {
 
-        /* update leaflet version from main class */
-        $leaflet_version = Leaflet_Map::$leaflet_version;
 
-        $foreachmap = __('You can also change this for each map');
+        $foreachmap = __('You can also change this for each map', 'leaflet-map');
 
         /* 
         * initiate options using internationalization! 
@@ -157,15 +155,16 @@ class Leaflet_Map_Plugin_Settings {
                     '[leaflet-map max_zoom="10"]'
                 )
             ),
-            'default_tiling_service' => array(
-                'display_name'=>__('Default Tiling Service', 'leaflet-map'),
-                'default' => 'other',
-                'type' => 'select',
-                'options' => array(
-                    'other' => __('I will provide my own map tile URL', 'leaflet-map'),
-                    'mapquest' => __('MapQuest (I have an app key)', 'leaflet-map'),
-                ),
-                'helptext' => __('Choose a tiling service or provide your own.', 'leaflet-map')
+            'map_tile_url' => array(
+                'display_name'=>__('Map Tile URL', 'leaflet-map'),
+                'default'=>'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                'type' => 'text',
+                'helptext' => sprintf('%1$s: <a href="http://wiki.openstreetmap.org/wiki/Tile_servers" target="_blank"> %2$s </a>. %4$s <br/> <code>[leaflet-map tileurl=http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg subdomains=abcd]</code>',
+                    __('See more tile servers', 'leaflet-map'),
+                    __('here', 'leaflet-map'),
+                    __('blog post', 'leaflet-map'),
+                    $foreachmap
+                )
             ),
             'map_tile_url_subdomains' => array(
                 'display_name'=>__('Map Tile URL Subdomains', 'leaflet-map'),
@@ -175,18 +174,6 @@ class Leaflet_Map_Plugin_Settings {
                     __('Some maps get tiles from multiple servers with subdomains such as a,b,c,d or 1,2,3,4', 'leaflet-map'),
                     $foreachmap
                 )
-            ),
-            'js_url' => array(
-                'display_name'=>__('JavaScript URL', 'leaflet-map'),
-                'default' => sprintf('https://unpkg.com/leaflet@%s/dist/leaflet.js', $leaflet_version),
-                'type' => 'text',
-                'helptext' => __('If you host your own Leaflet files, then paste the URL here.', 'leaflet-map')
-            ),
-            'css_url' => array(
-                'display_name'=>__('CSS URL', 'leaflet-map'),
-                'default' => sprintf('https://unpkg.com/leaflet@%s/dist/leaflet.css', $leaflet_version),
-                'type' => 'text',
-                'helptext' => __('Same as above.', 'leaflet-map')
             ),
             'default_attribution' => array(
                 'display_name'=>__('Default Attribution', 'leaflet-map'),

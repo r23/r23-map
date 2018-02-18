@@ -80,12 +80,12 @@ class Leaflet_Marker_Shortcode extends Leaflet_Shortcode {
         WPLeafletMapPlugin.add(function () {
             var marker_options = (function () {
                     var _options = <?php echo $options; ?>,
-                        iconArrays = ['iconSize', 'iconAnchor', 
+                        iconarrays = ['iconSize', 'iconAnchor', 
                             'shadowSize', 'shadowAnchor'];
                     if (_options.iconUrl) {
                         // arrays are strings, unfortunately...
-                        for (var i = 0, len = iconArrays.length; i < len; i++) {
-                            var option_name = iconArrays[i],
+                        for (var i = 0, len = iconarrays.length; i < len; i++) {
+                            var option_name = iconarrays[i],
                                 option = _options[ option_name ];
                             if (option) {
                                 _options[ option_name ] = option.join('').split(',');

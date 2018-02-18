@@ -27,7 +27,7 @@ class Leaflet_Line_Shortcode extends Leaflet_Shortcode {
             $fitbounds = $fitline;
         }
 
-        $locations = Array();
+        $locations = array();
 
         if (!empty($addresses)) {
             include_once(LEAFLET_MAP__PLUGIN_DIR . 'class.geocoder.php');
@@ -35,7 +35,7 @@ class Leaflet_Line_Shortcode extends Leaflet_Shortcode {
             foreach ($addresses as $address) {
                 if (trim($address)) {
                     $location = new Leaflet_Geocoder( $address );
-                    $locations[] = Array($location->lat, $location->lng);
+                    $locations[] = array($location->lat, $location->lng);
                 }
             }
         } else if (!empty($latlngs)) {

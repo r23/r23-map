@@ -159,24 +159,20 @@ class Leaflet_Map {
     */
 
     public static function enqueue_and_register () {
-        /* defaults from db */
         // Leaflet_Map_Plugin_Settings
-        include_once(LEAFLET_MAP__PLUGIN_DIR . 'class.plugin-settings.php');
-        $settings = Leaflet_Map_Plugin_Settings::init();
+        include_once LEAFLET_MAP__PLUGIN_DIR . 'class.plugin-settings.php';
 
-        $js_url = $settings->get('js_url');
-        $css_url = $settings->get('css_url');
-
-        wp_register_style('leaflet_stylesheet', $css_url, Array(), null, false);
-        wp_register_script('leaflet_js', $js_url, Array(), null, true);
+		wp_register_style('leaflet_stylesheet', plugins_url('leaflet/leaflet.css', __FILE__ ));
+		
+		wp_register_script('leaflet_js' ,plugins_url('leaflet/leaflet.js', __FILE__ ), array(), null, true);
         
         // optional ajax geojson plugin
-        wp_register_script('tmcw_togeojson', 'https://cdn.rawgit.com/mapbox/togeojson/master/togeojson.js', Array('jquery'), self::$version, false);
+        wp_register_script('tmcw_togeojson', 'https://cdn.rawgit.com/mapbox/togeojson/master/togeojson.js', array('jquery'), self::$version, false);
 
-        wp_register_script('leaflet_ajax_geojson_js', plugins_url('scripts/leaflet-ajax-geojson.min.js', __FILE__), Array('tmcw_togeojson', 'leaflet_js'), self::$version, false);
+        wp_register_script('leaflet_ajax_geojson_js', plugins_url('scripts/leaflet-ajax-geojson.min.js', __FILE__), array('tmcw_togeojson', 'leaflet_js'), self::$version, false);
         
         /* run a construct function in the document head for subsequent functions to use (it is lightweight) */
-        wp_enqueue_script('leaflet_map_construct', plugins_url('scripts/construct-leaflet-map.min.js', __FILE__), Array(), self::$version, false);
+        wp_enqueue_script('leaflet_map_construct', plugins_url('scripts/construct-leaflet-map.min.js', __FILE__), array(), self::$version, false);
     }
 
     /**
@@ -239,7 +235,7 @@ class Leaflet_Map {
             'opacity' => isset($opacity) ? $opacity : NULL,
             'lineCap' => isset($linecap) ? $linecap : NULL,
             'lineJoin' => isset($linejoin) ? $linejoin : NULL,
-            'dashArray' => isset($dasharray) ? $dasharray : NULL,
+            'dasharray' => isset($dasharray) ? $dasharray : NULL,
             'dashOffset' => isset($dashoffset) ? $dashoffset : NULL,
             'fill' => isset($fill) ? $fill : NULL,
             'fillColor' => isset($fillcolor) ? $fillcolor : NULL,
@@ -255,7 +251,7 @@ class Leaflet_Map {
             'opacity' => FILTER_VALIDATE_FLOAT,
             'lineCap' => FILTER_SANITIZE_STRING,
             'lineJoin' => FILTER_SANITIZE_STRING,
-            'dashArray' => FILTER_SANITIZE_STRING,
+            'dasharray' => FILTER_SANITIZE_STRING,
             'dashOffset' => FILTER_SANITIZE_STRING,
             'fill' => FILTER_VALIDATE_BOOLEAN,
             'fillColor' => FILTER_SANITIZE_STRING,
