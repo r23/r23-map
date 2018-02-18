@@ -1,11 +1,10 @@
-# Copyright (C) 2018 Leaflet Map
-# This file is distributed under the same license as the Leaflet Map package.
+#, fuzzy
 msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"Project-Id-Version: Leaflet Map\n"
-"POT-Creation-Date: 2018-02-17 18:05+0100\n"
-"PO-Revision-Date: 2018-02-17 18:05+0100\n"
+"Project-Id-Version: R23 Map Plugin\n"
+"POT-Creation-Date: 2018-02-18 19:42+0100\n"
+"PO-Revision-Date: 2018-02-18 19:41+0100\n"
 "Last-Translator: r23 <info@r23.de>\n"
 "Language-Team: r23 <info@r23.de>\n"
 "MIME-Version: 1.0\n"
@@ -14,7 +13,7 @@ msgstr ""
 "X-Generator: Poedit 2.0.6\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
-"X-Poedit-WPHeader: leaflet-map.php\n"
+"X-Poedit-WPHeader: r23-map.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
@@ -22,195 +21,178 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: class.plugin-settings.php:54
+#: classes/class-plugin-settings.php:52
 msgid "You can also change this for each map"
 msgstr ""
 
-#: class.plugin-settings.php:61
+#: classes/class-plugin-settings.php:59
 msgid "Default Latitude"
 msgstr ""
 
-#: class.plugin-settings.php:65
+#: classes/class-plugin-settings.php:63
 msgid "Default latitude for maps."
 msgstr ""
 
-#: class.plugin-settings.php:70
+#: classes/class-plugin-settings.php:68
 msgid "Default Longitude"
 msgstr ""
 
-#: class.plugin-settings.php:74
+#: classes/class-plugin-settings.php:72
 msgid "Default longitude for maps."
 msgstr ""
 
-#: class.plugin-settings.php:79
+#: classes/class-plugin-settings.php:77
 msgid "Default Zoom"
 msgstr ""
 
-#: class.plugin-settings.php:83
+#: classes/class-plugin-settings.php:81
 msgid "Default zoom for maps."
 msgstr ""
 
-#: class.plugin-settings.php:88
+#: classes/class-plugin-settings.php:86
 msgid "Default Height"
 msgstr ""
 
-#: class.plugin-settings.php:92
+#: classes/class-plugin-settings.php:90
 msgid ""
 "Default height for maps. Values can include \"px\" but it is not necessary. "
 "Can also be \"%\". "
 msgstr ""
 
-#: class.plugin-settings.php:97
+#: classes/class-plugin-settings.php:95
 msgid "Default Width"
 msgstr ""
 
-#: class.plugin-settings.php:101
+#: classes/class-plugin-settings.php:99
 msgid ""
 "Default width for maps. Values can include \"px\" but it is not necessary.  "
 "Can also be \"%\"."
 msgstr ""
 
-#: class.plugin-settings.php:106
+#: classes/class-plugin-settings.php:104
 msgid "Fit Markers"
 msgstr ""
 
-#: class.plugin-settings.php:110
+#: classes/class-plugin-settings.php:108
 msgid ""
 "If enabled, all markers on each map will alter the view of the map; i.e. the "
 "map will fit to the bounds of all of the markers on the map."
 msgstr ""
 
-#: class.plugin-settings.php:115
+#: classes/class-plugin-settings.php:113
 msgid "Show Zoom Controls"
 msgstr ""
 
-#: class.plugin-settings.php:119
+#: classes/class-plugin-settings.php:117
 msgid "The zoom buttons can be large and annoying."
 msgstr ""
 
-#: class.plugin-settings.php:124
+#: classes/class-plugin-settings.php:122
 msgid "Scroll Wheel Zoom"
 msgstr ""
 
-#: class.plugin-settings.php:128
+#: classes/class-plugin-settings.php:126
 msgid ""
 "Disable zoom with mouse scroll wheel.  Sometimes someone wants to scroll "
 "down the page, and not zoom the map."
 msgstr ""
 
-#: class.plugin-settings.php:133
+#: classes/class-plugin-settings.php:131
 msgid "Double Click Zoom"
 msgstr ""
 
-#: class.plugin-settings.php:137
+#: classes/class-plugin-settings.php:135
 msgid ""
 "If enabled, your maps will zoom with a double click.  By default it is "
 "disabled: If we're going to remove zoom controls and have scroll wheel zoom "
 "off by default, we might as well stick to our guns and not zoom the map."
 msgstr ""
 
-#: class.plugin-settings.php:142
+#: classes/class-plugin-settings.php:140
 msgid "Default Min Zoom"
 msgstr ""
 
-#: class.plugin-settings.php:146
+#: classes/class-plugin-settings.php:144
 msgid ""
 "Restrict the viewer from zooming in past the minimum zoom.  Can set per map "
 "in shortcode or adjust for all maps here."
 msgstr ""
 
-#: class.plugin-settings.php:151
+#: classes/class-plugin-settings.php:149
 msgid "Default Max Zoom"
 msgstr ""
 
-#: class.plugin-settings.php:155
+#: classes/class-plugin-settings.php:153
 msgid ""
 "Restrict the viewer from zooming out past the maximum zoom.  Can set per map "
 "in shortcode or adjust for all maps here"
 msgstr ""
 
-#: class.plugin-settings.php:161
-msgid "Default Tiling Service"
+#: classes/class-plugin-settings.php:159
+msgid "Map Tile URL"
 msgstr ""
 
-#: class.plugin-settings.php:165
-msgid "I will provide my own map tile URL"
+#: classes/class-plugin-settings.php:163
+msgid "See more tile servers"
 msgstr ""
 
-#: class.plugin-settings.php:166
-msgid "MapQuest (I have an app key)"
+#: classes/class-plugin-settings.php:164
+msgid "here"
 msgstr ""
 
-#: class.plugin-settings.php:168
-msgid "Choose a tiling service or provide your own."
+#: classes/class-plugin-settings.php:165
+msgid "blog post"
 msgstr ""
 
-#: class.plugin-settings.php:171
+#: classes/class-plugin-settings.php:170
 msgid "Map Tile URL Subdomains"
 msgstr ""
 
-#: class.plugin-settings.php:175
+#: classes/class-plugin-settings.php:174
 msgid ""
 "Some maps get tiles from multiple servers with subdomains such as a,b,c,d or "
 "1,2,3,4"
 msgstr ""
 
-#: class.plugin-settings.php:180
-msgid "JavaScript URL"
-msgstr ""
-
-#: class.plugin-settings.php:183
-msgid "If you host your own Leaflet files, then paste the URL here."
-msgstr ""
-
-#: class.plugin-settings.php:186
-msgid "CSS URL"
-msgstr ""
-
-#: class.plugin-settings.php:189
-msgid "Same as above."
-msgstr ""
-
-#: class.plugin-settings.php:192
+#: classes/class-plugin-settings.php:179
 msgid "Default Attribution"
 msgstr ""
 
-#: class.plugin-settings.php:194
+#: classes/class-plugin-settings.php:181
 msgid "A JS library for interactive maps"
 msgstr ""
 
-#: class.plugin-settings.php:195
+#: classes/class-plugin-settings.php:182
 msgid "contributors"
 msgstr ""
 
-#: class.plugin-settings.php:198
+#: classes/class-plugin-settings.php:185
 msgid ""
 "Attribution to a custom tile url.  Use semi-colons (;) to separate multiple."
 msgstr ""
 
-#: class.plugin-settings.php:201
+#: classes/class-plugin-settings.php:188
 msgid "Geocoder"
 msgstr ""
 
-#: class.plugin-settings.php:205
+#: classes/class-plugin-settings.php:192
 msgid "Google Maps"
 msgstr ""
 
-#: class.plugin-settings.php:206
+#: classes/class-plugin-settings.php:193
 msgid "OpenStreetMap Nominatim"
 msgstr ""
 
-#: class.plugin-settings.php:207
+#: classes/class-plugin-settings.php:194
 msgid "Denmark Addresses"
 msgstr ""
 
-#: class.plugin-settings.php:209
+#: classes/class-plugin-settings.php:196
 msgid ""
 "Select the Geocoding provider to use to retrieve addresses defined in "
 "shortcode."
 msgstr ""
 
-#. Description of the plugin/theme
 #: templates/settings.php:3
 msgid ""
 "A plugin for creating a Leaflet JS map with a shortcode. Boasts two free map "
@@ -326,17 +308,19 @@ msgid "Test Image Map"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-msgid "Leaflet Map"
+msgid "R23 Map Plugin"
 msgstr ""
 
-#. Plugin URI of the plugin/theme
-msgid "https://wordpress.org/plugins/leaflet-map/"
+#. Description of the plugin/theme
+msgid ""
+"Add a map generated with LeafletJS: an open-source JavaScript library for "
+"mobile-friendly interactive maps."
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "bozdoz"
+msgid "r23"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "https://twitter.com/bozdoz/"
+msgid "https://blog.r23.de/"
 msgstr ""

@@ -1,6 +1,6 @@
 <?php
 $title = $plugin_data['Name'];
-$description = __('A plugin for creating a Leaflet JS map with a shortcode. Boasts two free map tile services and three free geocoders.', 'leaflet-map');
+$description = __('A plugin for creating a Leaflet JS map with a shortcode. Boasts two free map tile services and three free geocoders.', 'r23-map');
 $version = $plugin_data['Version'];
 ?>
 <div class="wrap">
@@ -23,14 +23,14 @@ if (isset($_POST['submit'])) {
 	}
 ?>
 <div class="notice notice-success is-dismissible">
-	<p><?php _e('Options Updated!', 'leaflet-map'); ?></p>
+	<p><?php _e('Options Updated!', 'r23-map'); ?></p>
 </div>
 <?php
 } elseif (isset($_POST['reset'])) {
 	$settings->reset();
 ?>
 <div class="notice notice-success is-dismissible">
-	<p><?php _e('Options have been reset to default values!', 'leaflet-map'); ?></p>
+	<p><?php _e('Options have been reset to default values!', 'r23-map'); ?></p>
 </div>
 <?php
 } elseif (isset($_POST['clear-geocoder-cache'])) {
@@ -38,7 +38,7 @@ if (isset($_POST['submit'])) {
 	Leaflet_Geocoder::remove_caches();
 ?>
 <div class="notice notice-success is-dismissible">
-	<p><?php _e('Location caches have been cleared!', 'leaflet-map'); ?></p>
+	<p><?php _e('Location caches have been cleared!', 'r23-map'); ?></p>
 </div>
 <?php
 }
@@ -47,7 +47,7 @@ if (isset($_POST['submit'])) {
 	<div class="wrap">
 	<form method="post">
 		<div class="container">
-			<h2><?php _e('Settings', 'leaflet-map'); ?></h2>
+			<h2><?php _e('Settings', 'r23-map'); ?></h2>
 			<hr>
 		</div>
 	<?php
@@ -82,17 +82,17 @@ if (isset($_POST['submit'])) {
 			name="submit" 
 			id="submit" 
 			class="button button-primary" 
-			value="<?php _e('Save Changes', 'leaflet-map'); ?>">
+			value="<?php _e('Save Changes', 'r23-map'); ?>">
 		<input type="submit" 
 			name="reset" 
 			id="reset" 
 			class="button button-secondary" 
-			value="<?php _e('Reset to Defaults', 'leaflet-map'); ?>">
+			value="<?php _e('Reset to Defaults', 'r23-map'); ?>">
 		<input type="submit" 
 			name="clear-geocoder-cache" 
 			id="clear-geocoder-cache" 
 			class="button button-secondary" 
-			value="<?php _e('Clear Geocoder Cache', 'leaflet-map'); ?>">
+			value="<?php _e('Clear Geocoder Cache', 'r23-map'); ?>">
 	</div>
 
 	</form>

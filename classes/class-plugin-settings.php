@@ -49,151 +49,151 @@ class Leaflet_Map_Plugin_Settings {
 	private function __construct () {
 
 
-        $foreachmap = __('You can also change this for each map', 'leaflet-map');
+        $foreachmap = __('You can also change this for each map', 'r23-map');
 
         /* 
         * initiate options using internationalization! 
         */
         $this->options = array(
             'default_lat' => array(
-                'display_name'=>__('Default Latitude', 'leaflet-map'),
+                'display_name'=>__('Default Latitude', 'r23-map'),
                 'default'=>'44.67',
                 'type' => 'text',
                 'helptext' => sprintf('%1$s %2$s <br /> <code>[leaflet-map lat="44.67"]</code>', 
-                    __('Default latitude for maps.', 'leaflet-map'),
+                    __('Default latitude for maps.', 'r23-map'),
                     $foreachmap
                 )
             ),
             'default_lng' => array(
-                'display_name'=>__('Default Longitude', 'leaflet-map'),
+                'display_name'=>__('Default Longitude', 'r23-map'),
                 'default'=>'-63.61',
                 'type' => 'text',
                 'helptext' => sprintf('%1$s %2$s <br /> <code>[leaflet-map lng="-63.61"]</code>', 
-                    __('Default longitude for maps.', 'leaflet-map'),
+                    __('Default longitude for maps.', 'r23-map'),
                     $foreachmap
                 )
             ),
             'default_zoom' => array(
-                'display_name'=>__('Default Zoom', 'leaflet-map'),
+                'display_name'=>__('Default Zoom', 'r23-map'),
                 'default'=>'12',
                 'type' => 'text',
                 'helptext' => sprintf('%1$s %2$s <br /> <code>[leaflet-map zoom="5"]</code>', 
-                    __('Default zoom for maps.', 'leaflet-map'),
+                    __('Default zoom for maps.', 'r23-map'),
                     $foreachmap
                 )
             ),
             'default_height' => array(
-                'display_name'=>__('Default Height', 'leaflet-map'),
+                'display_name'=>__('Default Height', 'r23-map'),
                 'default'=>'250',
                 'type' => 'text',
                 'helptext' => sprintf('%1$s %2$s <br /> <code>[leaflet-map height="250"]</code>', 
-                    __('Default height for maps. Values can include "px" but it is not necessary. Can also be "%". ', 'leaflet-map'),
+                    __('Default height for maps. Values can include "px" but it is not necessary. Can also be "%". ', 'r23-map'),
                     $foreachmap
                 )
             ),
             'default_width' => array(
-                'display_name'=>__('Default Width', 'leaflet-map'),
+                'display_name'=>__('Default Width', 'r23-map'),
                 'default'=>'100%',
                 'type' => 'text',
                 'helptext' => sprintf('%1$s %2$s <br /> <code>[leaflet-map width="100%"]</code>', 
-                    __('Default width for maps. Values can include "px" but it is not necessary.  Can also be "%".', 'leaflet-map'),
+                    __('Default width for maps. Values can include "px" but it is not necessary.  Can also be "%".', 'r23-map'),
                     $foreachmap
                 )
             ),
             'fit_markers' => array(
-                'display_name'=>__('Fit Markers', 'leaflet-map'),
+                'display_name'=>__('Fit Markers', 'r23-map'),
                 'default' => '0',
                 'type' => 'checkbox',
                 'helptext' => sprintf('%1$s %2$s <br /> <code>[leaflet-map fit_markers="1"]</code>', 
-                    __('If enabled, all markers on each map will alter the view of the map; i.e. the map will fit to the bounds of all of the markers on the map.', 'leaflet-map'),
+                    __('If enabled, all markers on each map will alter the view of the map; i.e. the map will fit to the bounds of all of the markers on the map.', 'r23-map'),
                     $foreachmap
                 )
             ),
             'show_zoom_controls' => array(
-                'display_name'=>__('Show Zoom Controls', 'leaflet-map'),
+                'display_name'=>__('Show Zoom Controls', 'r23-map'),
                 'default' => '0',
                 'type' => 'checkbox',
                 'helptext' => sprintf('%1$s %2$s <br /> <code>[leaflet-map zoomcontrol="0"]</code>', 
-                    __('The zoom buttons can be large and annoying.', 'leaflet-map'),
+                    __('The zoom buttons can be large and annoying.', 'r23-map'),
                     $foreachmap
                 )
             ),
             'scroll_wheel_zoom' => array(
-                'display_name'=>__('Scroll Wheel Zoom', 'leaflet-map'),
+                'display_name'=>__('Scroll Wheel Zoom', 'r23-map'),
                 'default' => '0',
                 'type' => 'checkbox',
                 'helptext' => sprintf('%1$s %2$s <br /> <code>[leaflet-map scrollwheel="0"]</code>', 
-                    __('Disable zoom with mouse scroll wheel.  Sometimes someone wants to scroll down the page, and not zoom the map.', 'leaflet-map'),
+                    __('Disable zoom with mouse scroll wheel.  Sometimes someone wants to scroll down the page, and not zoom the map.', 'r23-map'),
                     $foreachmap
                 )
             ),
             'double_click_zoom' => array(
-                'display_name'=>__('Double Click Zoom', 'leaflet-map'),
+                'display_name'=>__('Double Click Zoom', 'r23-map'),
                 'default' => '0',
                 'type' => 'checkbox',
                 'helptext' => sprintf('%1$s %2$s <br /> <code>[leaflet-map doubleClickZoom=false]</code>', 
-                    __('If enabled, your maps will zoom with a double click.  By default it is disabled: If we\'re going to remove zoom controls and have scroll wheel zoom off by default, we might as well stick to our guns and not zoom the map.', 'leaflet-map'),
+                    __('If enabled, your maps will zoom with a double click.  By default it is disabled: If we\'re going to remove zoom controls and have scroll wheel zoom off by default, we might as well stick to our guns and not zoom the map.', 'r23-map'),
                     $foreachmap
                 )
             ),
             'default_min_zoom' => array(
-                'display_name'=>__('Default Min Zoom', 'leaflet-map'),
+                'display_name'=>__('Default Min Zoom', 'r23-map'),
                 'default' => '0',
                 'type' => 'text',
                 'helptext' => sprintf('%1$s %2$s <br /> <code>[leaflet-map min_zoom="1"]</code>', 
-                    __('Restrict the viewer from zooming in past the minimum zoom.  Can set per map in shortcode or adjust for all maps here.', 'leaflet-map'),
+                    __('Restrict the viewer from zooming in past the minimum zoom.  Can set per map in shortcode or adjust for all maps here.', 'r23-map'),
                     $foreachmap
                 )
             ),
             'default_max_zoom' => array(
-                'display_name'=>__('Default Max Zoom', 'leaflet-map'),
+                'display_name'=>__('Default Max Zoom', 'r23-map'),
                 'default' => '20',
                 'type' => 'text',
                 'helptext' => sprintf('%1$s %2%s <br /> <code>%3$s</code>', 
-                    __('Restrict the viewer from zooming out past the maximum zoom.  Can set per map in shortcode or adjust for all maps here', 'leaflet-map'),
+                    __('Restrict the viewer from zooming out past the maximum zoom.  Can set per map in shortcode or adjust for all maps here', 'r23-map'),
                     $foreachmap,
                     '[leaflet-map max_zoom="10"]'
                 )
             ),
             'map_tile_url' => array(
-                'display_name'=>__('Map Tile URL', 'leaflet-map'),
+                'display_name'=>__('Map Tile URL', 'r23-map'),
                 'default'=>'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
                 'type' => 'text',
                 'helptext' => sprintf('%1$s: <a href="http://wiki.openstreetmap.org/wiki/Tile_servers" target="_blank"> %2$s </a>. %4$s <br/> <code>[leaflet-map tileurl=http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg subdomains=abcd]</code>',
-                    __('See more tile servers', 'leaflet-map'),
-                    __('here', 'leaflet-map'),
-                    __('blog post', 'leaflet-map'),
+                    __('See more tile servers', 'r23-map'),
+                    __('here', 'r23-map'),
+                    __('blog post', 'r23-map'),
                     $foreachmap
                 )
             ),
             'map_tile_url_subdomains' => array(
-                'display_name'=>__('Map Tile URL Subdomains', 'leaflet-map'),
+                'display_name'=>__('Map Tile URL Subdomains', 'r23-map'),
                 'default'=>'abc',
                 'type' => 'text',
                 'helptext' => sprintf('%1$s %2$s <br/> <code>[leaflet-map subdomains="1234"]</code>',
-                    __('Some maps get tiles from multiple servers with subdomains such as a,b,c,d or 1,2,3,4', 'leaflet-map'),
+                    __('Some maps get tiles from multiple servers with subdomains such as a,b,c,d or 1,2,3,4', 'r23-map'),
                     $foreachmap
                 )
             ),
             'default_attribution' => array(
-                'display_name'=>__('Default Attribution', 'leaflet-map'),
+                'display_name'=>__('Default Attribution', 'r23-map'),
                 'default' => sprintf('<a href="http://leafletjs.com" title="%1$s">Leaflet</a>; \r\n© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> %2$s',
-                        __("A JS library for interactive maps", 'leaflet-map'),
-                        __("contributors", 'leaflet-map')
+                        __("A JS library for interactive maps", 'r23-map'),
+                        __("contributors", 'r23-map')
                     ),
                 'type' => 'textarea',
-                'helptext' => __('Attribution to a custom tile url.  Use semi-colons (;) to separate multiple.', 'leaflet-map')
+                'helptext' => __('Attribution to a custom tile url.  Use semi-colons (;) to separate multiple.', 'r23-map')
             ),
             'geocoder' => array(
-                'display_name'=>__('Geocoder', 'leaflet-map'),
+                'display_name'=>__('Geocoder', 'r23-map'),
                 'default' => 'google',
                 'type' => 'select',
                 'options' => array(
-                    'google' => __('Google Maps', 'leaflet-map'),
-                    'osm' => __('OpenStreetMap Nominatim', 'leaflet-map'),
-                    'dawa' => __('Denmark Addresses', 'leaflet-map')
+                    'google' => __('Google Maps', 'r23-map'),
+                    'osm' => __('OpenStreetMap Nominatim', 'r23-map'),
+                    'dawa' => __('Denmark Addresses', 'r23-map')
                 ),
-                'helptext' => __('Select the Geocoding provider to use to retrieve addresses defined in shortcode.', 'leaflet-map')
+                'helptext' => __('Select the Geocoding provider to use to retrieve addresses defined in shortcode.', 'r23-map')
             )
         );
 

@@ -62,7 +62,7 @@ define('LEAFLET_MAP__PLUGIN_FILE', __FILE__);
 define('LEAFLET_MAP__PLUGIN_DIR', plugin_dir_path( __FILE__ ));
 
 // import main class
-include_once LEAFLET_MAP__PLUGIN_DIR . 'class-leaflet-map.php';
+include_once LEAFLET_MAP__PLUGIN_DIR . 'class-r23-map.php';
 
 // uninstall hook
 register_uninstall_hook( __FILE__, array('Leaflet_Map', 'uninstall') );

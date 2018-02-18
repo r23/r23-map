@@ -150,7 +150,7 @@ class Leaflet_Map {
     *
     */
     public static function load_text_domain() {
-        load_plugin_textdomain( 'leaflet-map', false, dirname( plugin_basename( LEAFLET_MAP__PLUGIN_FILE ) ) . '/languages/' );
+        load_plugin_textdomain( 'r23-map', false, dirname( plugin_basename( LEAFLET_MAP__PLUGIN_FILE ) ) . '/languages/' );
     }
 
     /**
